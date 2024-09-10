@@ -1,7 +1,6 @@
 import 'dart:convert';
-
 import 'package:dio/dio.dart';
-import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 
 abstract class PointsOfInterestesServices {
   Future<List<PointOfInterest>> fetchPointsOfInterests();

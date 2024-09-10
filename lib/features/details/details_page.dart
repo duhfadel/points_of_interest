@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 
 class DetailsScreen extends StatelessWidget {
   final PointOfInterest pointOfInterest;
