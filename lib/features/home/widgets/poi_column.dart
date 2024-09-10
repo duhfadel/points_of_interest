@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:points_of_interests/core/constants.dart';
 import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 import 'package:points_of_interests/features/home/cubit/home_cubit.dart';
 import 'package:points_of_interests/features/home/cubit/home_state.dart';
@@ -6,7 +7,8 @@ import 'package:points_of_interests/features/home/widgets/button_delete_all.dart
 import 'package:points_of_interests/features/home/widgets/poi_item.dart';
 
 class PointsOfInterestColumn extends StatelessWidget {
-  const PointsOfInterestColumn({super.key, required this.searchController, required this.homeCubit, required this.state});
+  const PointsOfInterestColumn(
+      {super.key, required this.searchController, required this.homeCubit, required this.state});
 
   final TextEditingController searchController;
   final HomeCubit homeCubit;
@@ -21,7 +23,7 @@ class PointsOfInterestColumn extends StatelessWidget {
           onChanged: (value) => homeCubit.filterList(value),
           decoration: const InputDecoration(hintText: 'Filter typing here'),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: AppConstants.smallSizeSpace),
         GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -37,9 +39,8 @@ class PointsOfInterestColumn extends StatelessWidget {
           },
         ),
         ButtonDeleteAllPoi(homeCubit: homeCubit),
-        const SizedBox(height: 24)
+        const SizedBox(height: AppConstants.mediumSizeSpace)
       ],
     );
   }
 }
-

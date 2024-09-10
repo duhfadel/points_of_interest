@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:points_of_interests/core/constants.dart';
 import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -17,13 +18,13 @@ class DetailsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: AppConstants.mediumSizeSpace),
               Image.network(
                 pointOfInterest.image,
                 fit: BoxFit.cover,
                 width: double.maxFinite,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: AppConstants.mediumSizeSpace),
               Text('Geocoordinates: ${pointOfInterest.geocoordinates}'),
             ],
           ),

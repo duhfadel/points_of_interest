@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
+import 'package:points_of_interests/core/constants.dart';
 import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 
 abstract class PointsOfInterestesServices {
@@ -15,7 +16,7 @@ class PointsOfInterestesServicesImpl extends PointsOfInterestesServices {
   Future<List<PointOfInterest>> fetchPointsOfInterests() async {
     try {
       //This is the correct API request:
-      Response response = await dio.get('worldline-spain/technical_test_backend/main/pois.json');
+      Response response = await dio.get(AppConstants.pathUrl);
       //Use this line to receive an error:
       // Response response = await dio.get('worldline-spain/technical_test_backend/main/poisasdsa.json');
       Map<String, dynamic> decodedData = jsonDecode(response.data);
