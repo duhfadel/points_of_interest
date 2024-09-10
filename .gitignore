@@ -1,0 +1,58 @@
+# Flutter/Dart related
+**/build/
+**/.dart_tool/
+**/.packages
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
+
+# iOS related
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.framework
+ios/Flutter/app.icns
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Flutter/flutter_assets/
+ios/ServiceDefinitions.json
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Android related
+**/android/.gradle/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/local.properties
+**/android/key.properties
+
+# IntelliJ related
+.idea/
+*.iml
+
+# VSCode related
+.vscode/
+
+# Files for environment
+.env
+.env.*
+*.env
+
+# Linux related
+linux/flutter/ephemeral/
+
+# macOS related
+macos/Flutter/ephemeral/
+
+# Windows related
+windows/flutter/ephemeral/
+
+# Web related
+web/flutter/ephemeral/
+
+# Other files
+.DS_Store
+*.log
