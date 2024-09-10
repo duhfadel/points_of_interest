@@ -18,7 +18,7 @@ class HomeProvider extends StatelessWidget {
     final config = Configuration.local([PointOfInterestRealm.schema]);
     final realm = Realm(config);
     PointsOfInterestesServices pointsOfInterestesServices = PointsOfInterestesServicesImpl(dio: dioHttpClient.dio);
-    PointsOfInterestLocalService pointsOfInterestLocalService = PointsOfInterestLocalServiceImpl(realm);
+    PointsOfInterestLocalService pointsOfInterestLocalService = PointsOfInterestLocalService(realm);
     PointsOfInterestRepository pointsOfInterestRepository = PointsOfInterestRepositoryImpl(
         pointsOfInterestesServices: pointsOfInterestesServices,
         pointsOfInterestLocalService: pointsOfInterestLocalService);
