@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 import 'package:points_of_interests/features/home/cubit/home_cubit.dart';
 import 'package:points_of_interests/features/home/cubit/home_state.dart';
-import 'package:points_of_interests/features/home/widgets/poi_button.dart';
+import 'package:points_of_interests/features/home/widgets/button_delete_all.dart';
 import 'package:points_of_interests/features/home/widgets/poi_item.dart';
 
 class PointsOfInterestColumn extends StatelessWidget {
@@ -36,7 +36,7 @@ class PointsOfInterestColumn extends StatelessWidget {
             }
           },
         ),
-        PoiButton(homeCubit: homeCubit),
+        ButtonDeleteAllPoi(homeCubit: homeCubit),
         const SizedBox(height: 24)
       ],
     );
