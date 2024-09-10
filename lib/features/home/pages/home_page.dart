@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:points_of_interests/features/home/cubit/home_cubit.dart';
 import 'package:points_of_interests/features/home/cubit/home_state.dart';
 import 'package:points_of_interests/features/home/widgets/poi_column.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 //Stateful because we need the textEditingController
 class HomaPageScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _HomaPageScreenState extends State<HomaPageScreen> {
     HomeCubit homeCubit = context.read<HomeCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Soccer Stadiums in Spain'),
+        title:  Text(AppLocalizations.of(context)!.homeAppBarTitle),
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
@@ -46,7 +47,7 @@ class _HomaPageScreenState extends State<HomaPageScreen> {
                     Center(
                       child: Padding(
                         padding: const EdgeInsets.only(top: 100.0),
-                        child: Text('No points of interest to show right now. \n${state.errorMessage}'),
+                        child: Text('${AppLocalizations.of(context)!.noPoiToShowText} \n${state.errorMessage}'),
                       ),
                     ),
                 ],

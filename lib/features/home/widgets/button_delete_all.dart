@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:points_of_interests/core/constants.dart';
 import 'package:points_of_interests/features/home/cubit/home_cubit.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ButtonDeleteAllPoi extends StatelessWidget {
   const ButtonDeleteAllPoi({
@@ -23,9 +24,9 @@ class ButtonDeleteAllPoi extends StatelessWidget {
               ),
             ),
             onPressed: () => homeCubit.deleteAll(),
-            child: const Text(
-              'Delete data',
-              style: TextStyle(color: AppConstants.whiteColor),
+            child:  Text(
+              AppLocalizations.of(context)!.deleteDataButtonText,
+              style: const TextStyle(color: AppConstants.whiteColor),
             )));
   }
 }

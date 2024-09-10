@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:points_of_interests/core/constants.dart';
 import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DetailsScreen extends StatelessWidget {
   final PointOfInterest pointOfInterest;
@@ -25,7 +26,7 @@ class DetailsScreen extends StatelessWidget {
                 width: double.maxFinite,
               ),
               const SizedBox(height: AppConstants.mediumSizeSpace),
-              Text('Geocoordinates: ${pointOfInterest.geocoordinates}'),
+              Text('${AppLocalizations.of(context)!.geocoordinatesText}: ${pointOfInterest.geocoordinates}'),
             ],
           ),
         ),
