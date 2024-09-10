@@ -21,8 +21,6 @@ class _HomaPageScreenState extends State<HomaPageScreen> {
     super.dispose();
   }
 
-  final TextEditingController textEditingController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     HomeCubit homeCubit = context.read<HomeCubit>();
