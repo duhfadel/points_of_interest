@@ -1,4 +1,5 @@
 import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 import 'package:realm/realm.dart';
 
 abstract class PointsOfInterestLocalService {

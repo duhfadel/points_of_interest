@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 
 class HomeState {
   final List<PointOfInterest>? pointsOfInterests;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 import 'package:points_of_interests/features/home/cubit/home_cubit.dart';
 import 'package:points_of_interests/features/home/cubit/home_state.dart';
 import 'package:points_of_interests/features/home/widgets/poi_button.dart';

@@ -1,4 +1,4 @@
-import 'package:points_of_interests/core/models/point_of_interest.dart';
+import 'package:points_of_interests/core/models/point_of_interest_ui.dart';
 import 'package:points_of_interests/core/services/poi_local_service.dart';
 import 'package:points_of_interests/core/services/poi_service.dart';
 
