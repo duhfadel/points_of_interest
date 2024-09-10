@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:points_of_interests/core/models/point_of_interest.dart';
 import 'package:points_of_interests/core/network/dio_http_client.dart';
 import 'package:points_of_interests/core/repository/poi_repository.dart';
 import 'package:points_of_interests/core/services/poi_local_service.dart';
@@ -14,15 +13,9 @@ class HomeProvider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    DioHttpClient dioHttpClient = DioHttpClient();
-    final config = Configuration.local([PointOfInterestRealm.schema]);
-    final realm = Realm(config);
-    PointsOfInterestesServices pointsOfInterestesServices = PointsOfInterestesServicesImpl(dio: dioHttpClient.dio);
-    PointsOfInterestLocalService pointsOfInterestLocalService = PointsOfInterestLocalService(realm);
     PointsOfInterestRepository pointsOfInterestRepository = PointsOfInterestRepositoryImpl(
-        pointsOfInterestesServices: pointsOfInterestesServices,
-        pointsOfInterestLocalService: pointsOfInterestLocalService);
-
+        pointsOfInterestLocalService: PointsOfInterestLocalService(context.read<Realm>()),
+        pointsOfInterestesServices: PointsOfInterestesServicesImpl(dio: context.read<DioHttpClient>().dio));
     return BlocProvider(
       create: (context) => HomeCubit(pointsOfInterestRepository: pointsOfInterestRepository),
       child: const HomaPageScreen(),
