@@ -1,0 +1,22 @@
+{
+  "textfieldHintText": "Filter typing here",
+  "@textfieldHintText": {
+    "description": ""
+  },
+  "deleteDataButtonText": "Delete data",
+  "@deleteDataButtonText": {
+    "description": ""
+  },
+  "homeAppBarTitle": "Soccer Stadiums in Spain",
+  "@homeAppBarTitle": {
+    "description": ""
+  },
+  "noPoiToShowText": "No points of interest to show right now.",
+  "@noPoiToShowText": {
+    "description": ""
+  },
+  "geocoordinatesText": "Geocoordinates",
+  "@geocoordinatesText": {
+    "description": ""
+  }
+}
